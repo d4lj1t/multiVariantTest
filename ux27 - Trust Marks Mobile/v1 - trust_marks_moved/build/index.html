@@ -1,0 +1,143 @@
+<style>
+.UX27-v1 #checkoutProgress {
+  text-align: center;
+  margin-bottom: 0;
+}
+.UX27-v1 #secure li.amexSafekey,
+.UX27-v1 #secure li.geotrust,
+.UX27-v1 #secure li.mastercard,
+.UX27-v1 #secure li.visa,
+.UX27-v1 .hof_card_1,
+.UX27-v1 .hof_card_2,
+.UX27-v1 .visa_card,
+.UX27-v1 .master_card,
+.UX27-v1 .maestro_card,
+.UX27-v1 .diners_club_card,
+.UX27-v1 .american_exp_card,
+.UX27-v1 .paypal_card {
+  background: #ffffff url('http://i.imgur.com/Lq8QoJ5.png') no-repeat left top;
+}
+.UX27-v1 #secure {
+  float: none;
+  height: 35px;
+}
+.UX27-v1 #secure ul {
+  width: 380px;
+  float: none;
+  margin: 0 auto;
+}
+.UX27-v1 #secure li {
+  margin: 0 10px 0 0;
+  text-align: left;
+  text-indent: -9999px;
+}
+.UX27-v1 #secure li :last {
+  margin-right: 0;
+}
+.UX27-v1 #secure li.amexSafekey {
+  background-position: 0 -75px;
+  width: 91px;
+  height: 35px;
+}
+.UX27-v1 #secure li.geotrust {
+  background-position: -100px -75px;
+  width: 106px;
+  height: 35px;
+}
+.UX27-v1 #secure li.mastercard {
+  background-position: 0 -110px;
+  width: 74px;
+  height: 35px;
+}
+.UX27-v1 #secure li.visa {
+  background-position: -214px -80px;
+  width: 56px;
+  height: 35px;
+}
+@media only all and (max-width: 375px) {
+  .UX27-v1 #promotionalCodeContainer {
+    float: none;
+  }
+  .UX27-v1 #couponCodeInput {
+    width: 97%;
+  }
+  .UX27-v1 .addCouponButton {
+    width: 100%;
+  }
+  .UX27-v1 .cartPage div.promotionalCode {
+    width: 100%;
+  }
+  .UX27-v1 .cartPage div.promotionalCode label {
+    float: none;
+    text-align: left;
+  }
+  .UX27-v1 .cartPage .subTotalTable {
+    width: 100%;
+  }
+  .UX27-v1 .cartPage .subTotalTable th {
+    text-align: left;
+  }
+  .UX27-v1 #secure ul {
+    width: 240px;
+  }
+  .UX27-v1 #secure li {
+    margin-right: 20px;
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+  .UX27-v1 #secure li.mastercard {
+    margin-right: 38px;
+  }
+  .UX27-v1 #secure li.visa {
+    margin-left: 20px;
+  }
+}
+
+</style>
+<script>
+var HOFMaxymiser = HOFMaxymiser || {};
+HOFMaxymiser.UX27_v1 = function() {
+    var Settings = {
+        testName: 'UX27-v1',
+        isProduction: false
+    };
+
+
+    var Model = {};
+    var Controller = {};
+    var View = {
+        secure: $('#secure'),
+        primaryButton: $('.promotionalCode')
+    };
+
+
+    Controller.moveTrustMarks = function() {
+        setTimeout(function() {
+            View.secure.removeClass('ux14');
+        }, 1000);
+        View.primaryButton.before(View.secure);
+    };
+
+
+    Controller.loadView = function() {
+        log('js-loaded-' + Settings.testName);
+        document.body.classList.add(Settings.testName);
+        Controller.moveTrustMarks();
+    };
+
+
+    var log = function(textToLog) {
+        if (Settings.isProduction == false) {
+            console.log(textToLog);
+        }
+    };
+
+    Controller.loadView();
+};
+
+
+$(function() {
+    HOFMaxymiser.UX27_v1();
+});
+
+</script>

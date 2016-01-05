@@ -1,0 +1,144 @@
+.ux25-v2 {
+    //font-sizes
+    @helper-font-size: 2px;
+
+    .font-xs{font-size:@helper-font-size*6}
+    .font-sm{font-size:@helper-font-size*7}
+    .font-md{font-size:@helper-font-size*8}
+    .font-lg{font-size:@helper-font-size*9}
+    .font-xl{font-size:@helper-font-size*10}
+
+    .font-xs-large{font-size:@helper-font-size*11}
+    .font-sm-large{font-size:@helper-font-size*12}
+    .font-md-large{font-size:@helper-font-size*13}
+    .font-lg-large{font-size:@helper-font-size*14}
+    .font-xl-large{font-size:@helper-font-size*15}
+
+    .font-xs-extra-large{font-size:@helper-font-size*16}
+    .font-sm-extra-large{font-size:@helper-font-size*17}
+    .font-md-extra-large{font-size:@helper-font-size*18}
+    .font-lg-extra-large{font-size:@helper-font-size*19}
+    .font-xl-extra-large{font-size:@helper-font-size*20}
+
+    //font-sizes END
+
+    .pull-right {
+        float:right;
+    }
+
+    .marg-right{
+        margin-right: 10px;
+    }
+
+    .line-height-1 {
+        line-height: 1;
+    }
+
+    .letter-spacing-sm {
+        letter-spacing: 1px;
+    }
+
+
+
+    .vis-none{
+        visibility: hidden;
+    }
+    .inner-content {
+        margin-left: 5px;
+    }
+
+    .black-bg {
+        width: 100%;
+        height: 2000px;
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        display: none;
+    }
+
+    .blur-bg {
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        position:absolute;
+        z-index: -1;
+        opacity: 0.97;
+        top:-15px;
+
+    }
+
+    //icons
+
+    .icon-time{
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzUuNXB4IiBoZWlnaHQ9IjM1LjVweCIgdmlld0JveD0iMCAwIDM1LjUgMzUuNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzUuNSAzNS41IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTcuOCwwLjJDOC4xLDAuMiwwLjIsOC4xLDAuMiwxNy44czcuOCwxNy41LDE3LjUsMTcuNXMxNy41LTcuOCwxNy41LTE3LjVTMjcuNCwwLjIsMTcuOCwwLjJ6IE0yNS44LDIyLjdsLTguNS00LjVWNi4yaDF2MTEuM2w4LDQuMkwyNS44LDIyLjd6Ii8+PC9nPjwvc3ZnPg==);
+        width:20px;
+        height:20px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        background-size: 20px auto;
+    }
+
+    .icon-cross {
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTBweCIgaGVpZ2h0PSIxMHB4IiB2aWV3Qm94PSIwIDAgMTAgMTAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwIDEwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiM4QzhDOEMiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgeDE9IjAiIHkxPSIxMCIgeDI9IjEwIiB5Mj0iMCIvPjxsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzhDOEM4QyIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiB4MT0iMTAiIHkxPSIxMCIgeDI9IjAiIHkyPSIwIi8+PC9zdmc+);
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    //icons END
+    
+    .img-overlay{
+        position: absolute;
+        width:100%;
+        height:182px;
+        background: rgba(0, 0, 0, 0.8);
+
+        color: white;
+        text-align: center;
+
+        opacity: 0;
+        transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+
+        z-index:2;
+
+        visibility: hidden;
+    }
+
+    .remove-clicked .img-overlay {
+        visibility: visible;
+        opacity: 0.9;
+        z-index:1000;
+
+
+        transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+    }
+
+    .img-overlay.see-all-items {
+        visibility: visible;
+        opacity: 0.9;
+        z-index:1000;
+        top:0;
+        cursor: pointer;
+
+        a{
+            color:white;
+        }
+    }
+
+    .vertical-middle {
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        margin:auto;
+    }
+    
+    
+
+}

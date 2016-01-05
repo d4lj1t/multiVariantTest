@@ -1,0 +1,82 @@
+<style>
+#aside.ux14 {
+	margin-bottom: 20px;
+}
+#secure.ux14 {
+  margin-left: 45px;
+  float: none;
+  width: 260px;
+  display: block;
+}
+
+#secure.ux14 ul{
+	width: auto;
+ }
+
+
+#secure.ux14 li{
+  margin-right: 20px;
+  margin-bottom: 15px;
+  margin-left: 0;
+}
+
+#secure.ux14 li.mastercard {
+  background-position: -2px -110px;
+  margin-right: 38px;
+}
+
+
+</style>
+ 
+<script>
+
+var HOFMaxymiser = HOFMaxymiser || {};
+
+HOFMaxymiser = (function ($) {
+
+	'use strict';
+	
+	var Model = function () {return this;};
+	
+	var View = function () {
+      	this.onload = true;
+
+		this.secure = $('#secure');
+		this.aside = $('#aside.companion');
+	};
+
+	View.prototype.render = function () {
+		var secure = $('#secure');
+		var aside = $('#aside.companion');
+		aside.parent().append(secure);
+
+		aside.addClass('ux14');
+		secure.addClass('ux14');
+	};
+
+
+    var Controller = function () {return this;};
+	Controller.prototype.loadView = function () {
+		var testModel = new Model({});
+		var testView = new View();
+        testView.render();
+	};
+
+	return {
+        Model : Model,
+        View : View,
+        Controller : Controller
+    };
+})(mmcore.$);
+
+
+var bootStrapper = function () {
+    'use strict';
+    var testController = new HOFMaxymiser.Controller();
+    testController.loadView();
+};
+
+$( document ).ready(function() {
+   bootStrapper();
+});
+</script>

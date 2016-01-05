@@ -1,0 +1,30 @@
+#deliveryChannelsUL.ux4 div.shippingTitle {
+    font-weight: bold;
+}
+#deliveryChannelsUL.ux4 li div.deliveryIcon {
+    background: url("http://demandware.edgesuite.net/aaba_prd/on/demandware.static/Sites-hof-Site/-/default/v1415259289825/images/pdpDeliveryIcons.svg") no-repeat;width: 30px;height: 30px;float: left;margin-right: 10px;
+}
+#deliveryChannelsUL.ux4 li a.more-info, #deliveryChannelsUL.ux4 li a.less-info {
+    color: #336;display: inline;margin: 5px 0 0 0;text-decoration: none;font-weight:normal;
+}
+#deliveryChannelsUL.ux4 li a.less-info {
+    display:none;
+}
+#deliveryChannelsUL.ux4 li a.more-info:hover, #deliveryChannelsUL.ux4 li a.less-info:hover {
+    color: #e02f86;text-decoration: none
+}
+#deliveryChannelsUL.ux4 li div.shipping-description {
+    color: #000;font-weight: normal;margin: 3px 0 0 40px; display:none;
+}
+#deliveryChannelsUL.ux4 li, .hof-pdp-mobile #deliveryChannelsUL.ux4 li, .hof-pdp-mobile #deliveryChannelsUL.ux4 .methodUnavailable {
+    background:none;
+}
+#deliveryChannelsUL.ux4 li div.deliveryIcon.iscDelivery {background-position: 0 0}
+#deliveryChannelsUL.ux4 li div.deliveryIcon.collectPlusDelivery {background-position: 0 -60px}
+#deliveryChannelsUL.ux4 li div.deliveryIcon.ukDelivery {background-position: 0 -30px}
+#deliveryChannelsUL.ux4 li div.deliveryIcon.internationalDelivery {background-position: 0 -90px}
+
+#deliveryChannelsUL.ux4 li.methodUnavailable div.deliveryIcon.iscDelivery {background-position: -30px 0}
+#deliveryChannelsUL.ux4 li.methodUnavailable div.deliveryIcon.collectPlusDelivery {background-position: -30px -60px}
+#deliveryChannelsUL.ux4 li.methodUnavailable div.deliveryIcon.ukDelivery {background-position: -30px -30px}
+#deliveryChannelsUL.ux4 li.methodUnavailable div.deliveryIcon.internationalDelivery {background-position: -30px -90px}

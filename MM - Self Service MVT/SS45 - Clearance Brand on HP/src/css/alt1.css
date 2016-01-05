@@ -1,0 +1,42 @@
+#clearance-brands .brand a img {
+    border-bottom: 0;
+    margin: 0;
+}
+#clearance-brands .brand a {
+    border-bottom: 5px solid #fad000;
+    display: block;
+    width: 152px;
+    height:80px;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    margin: 0 17px;
+}
+
+#clearance-brands a:hover img {
+    border-bottom: 0 !important;
+}
+
+#clearance-brands .brand a:hover {
+    border-bottom: 5px solid #000;
+}
+
+
+/* CUSTOM IMAGE SIZES */
+
+#clearance-brands .brand a img.hugo {
+    width:115px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#clearance-brands .brand a img.shabbyChic {
+    width:125px;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+#clearance-brands .brand a img.phaseEight {
+    width: 140px;
+    margin: 0 auto;
+    padding-top: 6px;
+}

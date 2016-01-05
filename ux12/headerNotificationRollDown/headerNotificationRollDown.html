@@ -1,0 +1,75 @@
+<style>
+.ux12 .rolldown-notification {
+    width: 100%;
+    height: 40px;
+    line-height: 41px;
+    background: #d6f0b7;
+    margin: 0 auto;
+    padding: 1%;
+    font-size: 16px;
+    color: #000;
+    margin-top: 15px;
+    display: none;
+}
+
+.ux12 .rolldown-notification img {
+    width: 25px;
+    margin-top: 10px;
+}
+
+.ux12 .rolldown-notification .tick {
+    background: url("https://www.houseoffraser.co.uk/on/demandware.static/Sites-hof-Site/-/default/images/success_message_icon.png");
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin: 0 10px -5px 0;
+}
+</style>
+<script>
+(function() {
+
+    $('body').addClass('ux12');
+
+    $('#pageContainer').prepend('<div class="rolldown-notification"><div class="tick"></div>This product has been added to basket</div>');
+
+    addProductToMiniCart = function(form, callback) {
+        var serializedForm = jQuery(form).serialize();
+        jQuery.post(
+            '/on/demandware.store/Sites-hof-Site/default/Cart-MiniAddProduct',
+            serializedForm,
+            function(html) {
+                var htmlCache = html.replace(/<script.*?>[\s\S.]*?<\/script>/igm, " ");
+
+                HOFSite.variables.miniBagUI.updateCache(htmlCache);
+                jQuery('#basket-content').html(html);
+
+                var minicartSubtotal = jQuery.trim(jQuery('#minicart-pricesubtotal').text());
+                jQuery('#basket-total-sum').html(minicartSubtotal);
+
+                // The following call will update the mini bag button items whithout opening the mini bag
+                showMiniBag(true);
+                $('html, body').animate({scrollTop: $('.hof-navs').offset().top}, 600);
+
+                showMsgWhenDone('product');
+
+                //UX12 This event trigger rest of the functionality of the app and 
+                //     acts as a entry point
+                $.publish('product/added/to/cart');
+
+                if (callback)
+                    callback();
+            }
+        );
+    }
+
+    $.subscribe('product/added/to/cart', function() {
+        $('.rolldown-notification').slideDown(300)
+        setTimeout(function() {
+            $('.rolldown-notification').slideUp(200)
+        }, 4000);
+
+    });
+
+
+})();
+</script>

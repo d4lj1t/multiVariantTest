@@ -1,0 +1,79 @@
+$(function () {
+    console.log('ux25-loaded');
+    $('body').addClass('ux25-v1');
+
+    var date = new Date();
+    var minutes = 1;
+    date.setTime(date.getTime() + (minutes * 60 * 1000));
+
+    if ($('.quantity-block').text() === 0) {
+        $.cookie('miniBag_viewed', null, {path: '/'});
+    }
+
+
+    if ($('.quantity-block').text() > 0 && $.cookie('miniBag_viewed') === null && $.cookie('last_seen') === null) {
+
+        var showMiniBagBackup = showMiniBag;
+        var hideMiniBagBackup = hideMiniBag;
+
+        showMiniBag = function () {
+        };
+        hideMiniBag = function () {
+        };
+
+        showMiniBagBackup(true);
+
+        var strVar = "";
+        strVar += "<div class=\"minicart-left-content\" style=\"";
+        strVar += "    float: left;";
+        strVar += "    width: 50%;";
+        strVar += "    text-align:  center;";
+        strVar += "    padding-top: 15px;";
+        strVar += "    color: black;";
+        strVar += "\">";
+        strVar += "  <h3>Welcome Back!<\/h3>";
+        strVar += "  <p>Your basket was saved from your last visit.<\/p>";
+        strVar += "  <p>Order in the next <strong>4<\/strong>hrs to get Next Day Delivery.";
+        strVar += "<\/p><\/div>";
+
+        $('#basket-content').append(strVar);
+
+        $('.black-bg').length ? '' : $('.hof-navs').after('<div class="black-bg"></div>').fadeIn(100);
+        $('#hof-header .hof-btn-wrap .minicart-menu.hover-state').addClass('active');
+        $('#hof-header .black-bg').fadeIn(100);
+        $('.hof-navs').css('background', 'transparent');
+        $('nav.hof-buttons-set:first, nav.hof-buttons-set #login-menu, #searchSite').fadeTo(100, 0.3);
+
+        $('#minicart-menu').addClass('open').find('#basket-content').hide();
+        $('#basket-content').slideDown();
+
+        $('body').click(function () {
+            $('#basket-content').css('display', '');
+            $('#minicart-menu').removeClass('open');
+            $('#hof-header .black-bg').fadeOut(100);
+            $('.hof-navs').css('background', 'initial');
+            $('nav.hof-buttons-set:first, nav.hof-buttons-set #login-menu, #searchSite').fadeTo(100, 1);
+
+            showMiniBag = showMiniBagBackup;
+            hideMiniBag = hideMiniBagBackup;
+
+            hideMiniBag(true);
+
+            $('.minicart-left-content').remove();
+            $('#hof-header .hof-btn-wrap .minicart-menu.hover-state').removeClass('active');
+
+            $.cookie('miniBag_viewed', 'true', {expires: date, path: '/'});
+
+        });
+    }
+
+    $.cookie('last_seen', 'true', {expires: date, path: '/'});
+
+
+});
+
+
+
+
+
+

@@ -1,0 +1,347 @@
+.no-marg {
+  margin: 0 !important;
+}
+/* paddings */
+.no-pad {
+  padding: 0 !important;
+}
+.pad {
+  padding: 10px;
+}
+.pad-side {
+  padding: 0 10px;
+}
+.pad-left {
+  padding-left: 10px;
+}
+.pad-right {
+  padding-right: 10px;
+}
+.pad-top {
+  padding-top: 10px;
+}
+.pad-bottom {
+  padding-bottom: 10px;
+}
+.pad-top-bottom {
+  padding: 10px 0;
+}
+.thick-pad {
+  padding: 20px;
+}
+.thick-pad-side {
+  padding: 0 20px;
+}
+.thick-pad-left {
+  padding-left: 20px;
+}
+.thick-pad-right {
+  padding-right: 20px;
+}
+.thick-pad-top {
+  padding-top: 20px;
+}
+.thick-pad-bottom {
+  padding-bottom: 20px;
+}
+.thick-pad-top-bottom {
+  padding: 20px 0;
+}
+.thin-pad {
+  padding: 5px;
+}
+.thin-pad-side {
+  padding: 0 5px;
+}
+.thin-pad-left {
+  padding-left: 5px;
+}
+.thin-pad-right {
+  padding-right: 5px;
+}
+.thin-pad-top {
+  padding-top: 5px;
+}
+.thin-pad-bottom {
+  padding-bottom: 5px;
+}
+.thin-pad-top-bottom {
+  padding: 5px 0;
+}
+.extra-thin-pad {
+  padding: 3.33px;
+}
+.extra-thin-pad-side {
+  padding: 0 3.33px;
+}
+.extra-thin-pad-left {
+  padding-left: 3.33px;
+}
+.extra-thin-pad-right {
+  padding-right: 3.33px;
+}
+.extra-thin-pad-top {
+  padding-top: 3.33px;
+}
+.extra-thin-pad-bottom {
+  padding-bottom: 3.33px;
+}
+.extra-thin-pad-top-bottom {
+  padding: 3.33px 0;
+}
+.extra-thick-pad {
+  padding: 30px;
+}
+.extra-thick-pad-side {
+  padding: 0 30px;
+}
+.extra-thick-pad-left {
+  padding-left: 30px;
+}
+.extra-thick-pad-right {
+  padding-right: 30px;
+}
+.extra-thick-pad-top {
+  padding-top: 30px;
+}
+.extra-thick-pad-bottom {
+  padding-bottom: 30px;
+}
+.extra-thick-pad-top-bottom {
+  padding: 30px 0;
+}
+/* borders */
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+}
+.border-top {
+  border-top: 1px solid #ccc;
+}
+.border-top-bottom {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.border-side {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.border-thick-bottom-pink {
+  border-bottom: 2px solid #E51D9B;
+}
+.border-thick-top-pink {
+  border-top: 2px solid #E51D9B;
+}
+.border-top-dashed {
+  border-top: 1px dashed #CACACA;
+}
+/* fonts */
+.font-xs-extra-small {
+  font-size: 2px;
+}
+.font-sm-extra-small {
+  font-size: 4px;
+}
+.font-md-extra-small {
+  font-size: 6px;
+}
+.font-lg-extra-small {
+  font-size: 8px;
+}
+.font-xl-extra-small {
+  font-size: 10px;
+}
+.font-xs {
+  font-size: 12px;
+}
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 16px;
+}
+.font-lg {
+  font-size: 18px;
+}
+.font-xl {
+  font-size: 20px;
+}
+.font-xs-large {
+  font-size: 22px;
+}
+.font-sm-large {
+  font-size: 24px;
+}
+.font-md-large {
+  font-size: 26px;
+}
+.font-lg-large {
+  font-size: 28px;
+}
+.font-xl-large {
+  font-size: 30px;
+}
+.font-xs-extra-large {
+  font-size: 32px;
+}
+.font-sm-extra-large {
+  font-size: 34px;
+}
+.font-md-extra-large {
+  font-size: 36px;
+}
+.font-lg-extra-large {
+  font-size: 38px;
+}
+.font-xl-extra-large {
+  font-size: 40px;
+}
+/* font-weight */
+.font-weight-extra-light {
+  font-weight: 200;
+}
+.font-weight-light {
+  font-weight: 300;
+}
+.font-weight-regular {
+  font-weight: 400;
+}
+.font-weight-semi-bold {
+  font-weight: 600;
+}
+.font-weight-bold {
+  font-weight: 700;
+}
+/* line-height */
+.line-height-zero {
+  mso-line-height-rule: exactly;
+  line-height: 0;
+}
+.line-height-regular {
+  mso-line-height-rule: exactly;
+  line-height: 1;
+}
+.line-height-xs {
+  line-height: 15px;
+}
+.line-height-sm {
+  line-height: 19px;
+}
+.line-height-md {
+  line-height: 23px;
+}
+.line-height-lg {
+  line-heighht: 25px;
+}
+/* text align */
+.text-align-left {
+  text-align: left;
+}
+.text-align-right {
+  text-align: right;
+}
+.text-align-center {
+  text-align: center;
+}
+/* vertical align */
+.vertical-align-top {
+  vertical-align: top;
+}
+/* general */
+.full-width {
+  width: 100%;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.display-block {
+  display: block;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+/* backgrounds */
+.background-grey {
+  background-color: #efefef;
+}
+.background-white {
+  background-color: white;
+}
+.background-black {
+  background-color: #000;
+}
+.background-pink {
+  background-color: #E51D9B;
+}
+/* colors */
+.color-pink {
+  color: #E51D9B;
+}
+.color-white {
+  color: #fff;
+}
+.color-grey {
+  color: #9B9B9B;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.chevron-down-pink {
+  background-image: url('https://raw.githubusercontent.com/HouseofFraser/MVT/master/email/src/images/chevron-down-pink.png?token=AJFnHxAzoTAVg4DkRzMbUV3L8RlDAKXUks5ViBS8wA%3D%3D');
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  width: 10px;
+  height: 4px;
+}
+.icon-social-media {
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  width: 45px;
+  height: 44px;
+  /* background-size: 108px;*/
+  background-position: 0px 0px;
+}
+.icon-facebook {
+  background-image: url('https://raw.githubusercontent.com/HouseofFraser/MVT/master/email/src/images/icon-facebook.png?token=AJFnHwQYikhIbLfIXobuFFOgOV_FLYUHks5ViBTkwA%3D%3D');
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  width: 45px;
+  height: 44px;
+  /* background-size: 108px;*/
+  background-position: 0px 0px;
+}
+.icon-instagram {
+  background-image: url('https://raw.githubusercontent.com/HouseofFraser/MVT/master/email/src/images/icon-instagram.png?token=AJFnHwQlb4cxQWE3RWEpvYC4i6eO0qj3ks5ViBUMwA%3D%3D');
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  width: 45px;
+  height: 44px;
+  /* background-size: 108px;*/
+  background-position: 0px 0px;
+}
+.icon-pinterest {
+  background-image: url('https://raw.githubusercontent.com/HouseofFraser/MVT/master/email/src/images/icon-pinterest.png?token=AJFnHyjds4K0tZUZRmrFB_RqtAqzbW19ks5ViBU4wA%3D%3D');
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  width: 45px;
+  height: 44px;
+  /* background-size: 108px;*/
+  background-position: 0px 0px;
+}
+.icon-twitter {
+  background-image: url('https://raw.githubusercontent.com/HouseofFraser/MVT/master/email/src/images/icon-twitter.png?token=AJFnH2i8G3TQEup7Hoe_HhcRl4MHm45eks5ViBVPwA%3D%3D');
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  width: 45px;
+  height: 44px;
+  /* background-size: 108px;*/
+  background-position: 0px 0px;
+}

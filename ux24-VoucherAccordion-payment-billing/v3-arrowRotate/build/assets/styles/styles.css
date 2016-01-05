@@ -1,0 +1,126 @@
+
+.ux24-v3 #redeemCardsAndVouchers {
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline;
+  margin-left: 45px;
+}
+.ux24-v3 .pptGiftFieldset {
+  display: none;
+}
+.ux24-v3 .pptGiftFieldset legend {
+  margin-bottom: 0;
+  cursor: pointer;
+  line-height: 20px;
+  background-color: white;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.ux24-v3 .pptGiftFieldset legend p {
+  vertical-align: middle;
+  line-height: 20px;
+}
+.ux24-v3 .pptGiftFieldset legend p:hover {
+  color: black;
+}
+.ux24-v3 .pptGiftFieldset legend.active {
+  background-color: #E2238B;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.ux24-v3 .pptGiftFieldset legend.active p {
+  color: white;
+}
+.ux24-v3 .pptGiftFieldset legend span {
+  margin-left: 15px;
+  margin-right: 15px;
+  float: right;
+  width: 20px;
+  height: 20px;
+  background-image: none;
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.ux24-v3 .pptGiftFieldset legend span.active {
+  background-image: none;
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+.ux24-v3 .pptGiftFieldset legend span.active polyline {
+  stroke: white;
+}
+.ux24-v3 h1.paymentH1 {
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+.ux24-v3 #dwfrm_giftchecker_giftcode,
+.ux24-v3 #dwfrm_pptgiftcard_cardnumber {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 0;
+}
+.ux24-v3 #couponCodeInput {
+  margin-top: 10px;
+  width: 200px;
+}
+.ux24-v3 #redeemCardsAndVouchersContainer {
+  margin-left: 75px;
+  padding-bottom: 30px;
+}
+.ux24-v3 .section.cardsLi {
+  margin-left: 20px;
+}
+.ux24-v3 .pptGiftFieldset {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.ux24-v3 .pptGiftFieldset legend {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.ux24-v3 .basket-stock-msg {
+  border-bottom: solid 1px #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0 !important;
+}
+.ux24-v3 #giftVoucherBtn {
+  margin-bottom: 0;
+}
+.ux24-v3 fieldset div.success {
+  vertical-align: baseline;
+}
+.ux24-v3 #addCouponButton {
+  margin-left: 15px;
+}
+.ux24-v3 .voucher-terms {
+  margin-bottom: 5px;
+}
+.ux24-v3 hr.voucher-container {
+  margin-bottom: 12px;
+}
+.ux24-v3 .voucherCodeBtn {
+  margin-top: 10px;
+}
+.ux24-v3 #payPalContainer {
+  margin-bottom: 30px;
+}

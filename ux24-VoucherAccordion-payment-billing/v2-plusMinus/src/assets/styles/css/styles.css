@@ -1,0 +1,105 @@
+.ux24-v2 #redeemCardsAndVouchers {
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline;
+}
+.ux24-v2 .pptGiftFieldset {
+  display: none;
+}
+.ux24-v2 .pptGiftFieldset legend {
+  margin-bottom: 0;
+  cursor: pointer;
+  line-height: 20px;
+  background-color: white;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.ux24-v2 .pptGiftFieldset legend p {
+  vertical-align: middle;
+  line-height: 20px;
+}
+.ux24-v2 .pptGiftFieldset legend p:hover {
+  color: black;
+}
+.ux24-v2 .pptGiftFieldset legend.active {
+  background-color: #E2238B;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.ux24-v2 .pptGiftFieldset legend.active p {
+  color: white;
+}
+.ux24-v2 .pptGiftFieldset legend span {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSIyMHB4IiBoZWlnaHQ9IjQwcHgiIHZpZXdCb3g9IjAgMCAyMCA0MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGQ9Ik0wLDEwYzEuMywwLDIwLDAsMjAsMCIvPg0KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGQ9Ik0xMCwyMGMwLTEuMywwLTIwLDAtMjAiLz4NCjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNMCwzMGMxLjMsMCwyMCwwLDIwLDAiLz4NCjwvc3ZnPg0K');
+}
+.ux24-v2 .pptGiftFieldset legend span.active {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSIyMHB4IiBoZWlnaHQ9IjQwcHgiIHZpZXdCb3g9IjAgMCAyMCA0MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGQ9Ik0wLDEwYzEuMywwLDIwLDAsMjAsMCIvPg0KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGQ9Ik0xMCwyMGMwLTEuMywwLTIwLDAtMjAiLz4NCjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNMCwzMGMxLjMsMCwyMCwwLDIwLDAiLz4NCjwvc3ZnPg0K');
+  background-position: 0 -20px;
+}
+.ux24-v2 h1.paymentH1 {
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+.ux24-v2 #dwfrm_giftchecker_giftcode {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 0;
+}
+.ux24-v2 #couponCodeInput {
+  margin-top: 10px;
+  width: 200px;
+}
+.ux24-v2 #redeemCardsAndVouchersContainer {
+  margin-left: 75px;
+  padding-bottom: 30px;
+}
+.ux24-v2 .section.cardsLi {
+  margin-left: 20px;
+}
+.ux24-v2 .pptGiftFieldset {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.ux24-v2 .pptGiftFieldset legend {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.ux24-v2 .basket-stock-msg {
+  border-bottom: solid 1px #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0 !important;
+}
+.ux24-v2 #giftVoucherBtn {
+  margin-bottom: 0;
+}
+.ux24-v2 fieldset div.success {
+  vertical-align: baseline;
+}
+.ux24-v2 #addCouponButton {
+  margin-left: 15px;
+}
+.ux24-v2 .voucher-terms {
+  margin-bottom: 5px;
+}
+.ux24-v2 hr.voucher-container {
+  margin-bottom: 12px;
+}
+.ux24-v2 .voucherCodeBtn {
+  margin-top: 10px;
+}
+.ux24-v2 #payPalContainer {
+  margin-bottom: 30px;
+}

@@ -1,0 +1,284 @@
+<style>
+    #stickyAddtoBasketTest {position: fixed;z-index:999;bottom:0;left:0;width: 94%;background: rgba(255,255,255,0.9);padding:3%; font-size: 12px;}
+    #stickyAddtoBasketTest input[type="submit"] {margin:0;margin-top:10px;}
+    #stickyAddtoBasketTest a { float:right;text-decoration: none;color: #254571;}
+    #stickyAddtoBasketTest a.disabled-button {color:#b3b3b3; float:initial;}
+    #stickyAddtoBasketTest .hof-text-group {float: left;margin-right: 5px;}
+    #stickyAddtoBasketTest .hof-text-group .hof-value {font-weight: bold;}
+    #stickyAddtoBasketTest .hof-text-group .hof-value .priceNow {color: #000000;}
+    a.disabled-button { width: 99%;height: 40px;background: #e3eeae;border: none;border-bottom: 2px solid #cfd8a8;border-right: 2px solid #cfd8a8;color: #b3b3b3;display:none;text-decoration: none;text-align: center;line-height: 42px;font-weight: bold;font-family: "Trebuchet MS",Helvetica,Arial,sans-serif; margin-top:10px; font-size: 14px;}
+</style>
+<script>
+    var HOFMaxymiser = HOFMaxymiser || {};
+
+    HOFMaxymiser = (function ($) {
+
+        'use strict';
+
+        var Model = function () {return this;};
+
+        var View = function () {
+
+            //dont load
+            this.onload = false;
+
+            //caching elements
+            this.webSellingGroup = document.querySelectorAll('#set-products') ? document.querySelectorAll('#set-products').length : 0;
+            this.webSellingOut = document.querySelectorAll('.WSOSetProductContainer') ? document.querySelectorAll('.WSOSetProductContainer').length : 0;
+            this.webSellingRange = document.querySelectorAll('.setProductRow') ? document.querySelectorAll('.setProductRow').length : 0;
+            this.specialBrandsLogo = document.querySelectorAll('.specialbrandslogocontainer') ? document.querySelectorAll('.specialbrandslogocontainer').length : 0;
+            this.setProductsNoImages = document.querySelectorAll('#setProductsNoImages') ? document.querySelectorAll('#setProductsNoImages').length : 0;
+
+            this.validationMsg;
+        };
+
+        View.prototype.render = function () {
+
+            if(this.webSellingGroup || this.webSellingOut || this.webSellingRange || this.specialBrandsLogo || this.setProductsNoImages) {
+                console.log('Excluded from UX9 Test');
+            } else {
+
+                $(window).on('DOMContentLoaded load resize scroll', this.stickyAddToBag(this.showButton, this.hideButton));
+
+            }
+        };
+
+        View.prototype.stickyAddToBag = function (showButton, hideButton) {
+
+            var that = this;
+            var el = document.querySelector('#buttonAddToBag');
+            $('.refinement-block').before('<a name="changeOptions" \>');
+            View.prototype.eventHandlers();
+            return function () {
+                if ( View.prototype.isElementInViewport(el) ) {
+                    that.onload = true;
+                    if ($('#stickyAddtoBasketTest').length){
+                        hideButton(that);
+                    }
+                } else {
+                    if (!$('#stickyAddtoBasketTest').length){
+                        if(that.onload){
+                            showButton(that);
+                        }
+                    }
+                }
+            }
+        };
+
+        View.prototype.hideButton = function (that) {
+            $('#stickyAddtoBasketTest').remove();
+        }
+
+        View.prototype.showButton = function (that) {
+
+            var originalAddToBagButton = $('#buttonAddToBag').clone();
+            originalAddToBagButton = originalAddToBagButton.removeAttr('id');
+            originalAddToBagButton.val(that.getButtonState(that));
+            var disabledButton = $('<a></a>').attr("href","#changeOptions").addClass('disabled-button').html(that.getButtonState(that)).css('display','inline-block');
+
+            if(originalAddToBagButton.attr('disabled')){
+                disabledButton.show();
+                originalAddToBagButton.hide();
+            } else {
+                disabledButton.hide();
+                originalAddToBagButton.show();
+            }
+
+            var refinementSummary = $('#refinement-summary');
+
+            //templates
+            var qty = '<div class="hof-text-group hof-text-qty"><span class="hof-label">Qty:</span><span class="hof-value hof-value-qty">'+ $('#Quantity').val() +'</span></div>';
+            var addToBagOverlay = "<div class='sticky-add-to-bag-container' id='stickyAddtoBasketTest'><div id='summary'>"+ View.prototype.summaryAttribute($('#refinement-summary'))[0].innerHTML + qty +"</div><a href='#changeOptions'>Change</a>"+ originalAddToBagButton[0].outerHTML + disabledButton[0].outerHTML +"</div>";
+
+
+            $('#hof-body-container').append(addToBagOverlay);
+
+            $('#stickyAddtoBasketTest input').off().on('click',function(e){
+                $(document).trigger('StickyMob');
+                $(this).val('Adding...').prop('disabled',true);
+                addProductToMiniCart(document.forms.cartaddproduct, function(){
+                    $('html, body').animate({scrollTop: $('#buttonAddToBag').offset().top-12}, 500);
+                });
+            });
+        }
+
+        View.prototype.getButtonState = function(that){
+
+            var buttonText;
+
+// 		var productAttributes = {
+// 						//if color attribute exist and is disabled then return 1 else 0
+//         	'color'	: ( ($('.colours-container .selected') && $('.colours-container .selected').hasClass('disabled') ) ? $('.colours-container .selected').length : 0),	
+//         	'size'	: ( ($('.sizes-container .selected') && $('.sizes-container .selected').hasClass('disabled') ) ? $('.sizes-container .selected').length : 0)
+//         };
+
+// 		if (productAttributes.color) {
+// 			buttonText = buttonTextTemplate.missingAttributes;
+// 			return buttonText;
+// 		}
+
+            var buttonTextTemplate = {
+                'allAttributeSelectedText' : 'Add to Bag',
+                'missingAttributes' : 'Select Size or Colour to Add to Bag',
+                'addingToBasketText' : 'Adding...'
+            };
+
+            if ( $('.colours-container').length ) {
+                if ( $('.colours-container .selected').length ) {
+                    if ($('.colours-container .selected').hasClass('disabled')) {
+                        buttonText = buttonTextTemplate.missingAttributes;
+                    } else  {
+                        buttonText = buttonTextTemplate.allAttributeSelectedText;
+                    }
+                } else {
+                    buttonText = buttonTextTemplate.missingAttributes;
+                }
+            } else {
+                buttonText = buttonTextTemplate.allAttributeSelectedText;
+            }
+
+            if ( $('.sizes-container').length ) {
+                if ( $('.sizes-container .selected').length ) {
+                    if ($('.sizes-container .selected').hasClass('disabled')) {
+                        buttonText = buttonTextTemplate.missingAttributes;
+                    } else  {
+                        buttonText = buttonTextTemplate.allAttributeSelectedText;
+                    }
+                } else {
+                    buttonText = buttonTextTemplate.missingAttributes;
+                }
+            } else {
+                buttonText = buttonTextTemplate.allAttributeSelectedText;
+            }
+
+            return buttonText;
+
+        }
+
+        View.prototype.summaryAttribute = function (el) {
+            var rs = el.clone();
+            rs.find('span:last').html(rs.find('span:last').html().replace(/\s/g,'')).append('<span>,</span>');
+            return rs;
+        }
+
+
+        View.prototype.isElementInViewport = function (el) {
+            //special bonus for those using jQuery
+            if (typeof jQuery === "function" && el instanceof jQuery) {
+                el = el[0];
+            }
+
+            var rect = el.getBoundingClientRect();
+
+            return (
+            rect.top >= -40 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && //or $(window).height()
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth) // or $(window).width()
+            );
+        };
+
+        View.prototype.eventHandlers = function () {
+            var that = this;
+            var colours = $('ul.colour-swatches-list') ? $('ul.colour-swatches-list').length : 0;
+            var sizes = $('ul.size-swatches-list') ? $('ul.size-swatches-list').length : 0;
+            var qty = '<div class="hof-text-group hof-text-qty"><span class="hof-label">Qty:</span><span class="hof-value hof-value-qty">'+ $('#Quantity').val() +'</span></div>';
+
+
+            $(document).on('click','.disabled-button',function(){
+                var attrAddToBasket = 'UX9StickyAddToBagMob';
+                mmcore.SetAction('UX9StickyAddToBagMob', 1, attrAddToBasket);
+                mmcore.request('events');
+            });
+
+            $(document).on('StickyMob',function(){
+                var attrAddToBasket = 'UX9StickyAddToBagMob';
+                mmcore.SetAction('UX9StickyAddToBagMob', 1, attrAddToBasket);
+                mmcore.request('events');
+            });
+
+
+            $('body').on('transitionend webkitTransitionEnd', function() {
+                $('.hamburger-close-button, .hof-touch-prevent-click, .hof-icon.hof-icon-x, .description-close-button, .hof-touch-prevent-cover').off().on('touchstart', function(e) {
+                    setTimeout(function() {
+                        $('#hof-body-container').css({'-webkit-transform': '','position': ''});
+                        $('#stickyAddtoBasketTest').css({'position': 'absolute'});
+                        $('#stickyAddtoBasketTest').css({'position': 'fixed'});
+                        $('body').hide();
+                        $(window).scrollTop($(window).scrollTop() + 10);
+                    }, 1000);
+                    setTimeout(function() {
+                        $('#hof-body-container').css({'-webkit-transform': '','position': ''});
+                        $('#stickyAddtoBasketTest').css({'position': 'absolute'});
+                        $('#stickyAddtoBasketTest').css({'position': 'fixed'});
+                        $('body').show();
+                        $(window).scrollTop($(window).scrollTop() - 10);
+                    }, 1001);
+                });
+            });
+
+            if(colours) {
+                $('ul.colour-swatches-list li').off().on('click touchend',function(e){
+                    e.preventDefault();
+                    if (!$(e.currentTarget).hasClass('disabled')){
+                        $('.disabled-button').hide();
+                        $('.disabled-button').html(View.prototype.getButtonState(that));
+                        $('#stickyAddtoBasketTest input').val(View.prototype.getButtonState(that));
+                        $('#stickyAddtoBasketTest input').prop( "disabled", false).show();
+                        $('#stickyAddtoBasketTest #summary').html(View.prototype.summaryAttribute($('#refinement-summary'))[0].innerHTML + qty);
+                    } else {
+                        $('#stickyAddtoBasketTest input').prop( "disabled", true).hide();
+                        $('#stickyAddtoBasketTest input').val(View.prototype.getButtonState(that));
+                        $('.disabled-button').html(View.prototype.getButtonState(that));
+                        $('.disabled-button').css('display','inline-block');
+                        $('#stickyAddtoBasketTest #summary').html(View.prototype.summaryAttribute($('#refinement-summary'))[0].innerHTML + qty);
+                    }
+                });
+            }
+
+            if(sizes) {
+                $('ul.size-swatches-list li').off().on('click touchend', function(e){
+                    e.preventDefault();
+                    if (!$(e.currentTarget).hasClass('disabled')){
+                        $('.disabled-button').hide();
+                        $('.disabled-button').html(View.prototype.getButtonState(that));
+                        $('#stickyAddtoBasketTest input').prop( "disabled", false).show();
+                        $('#stickyAddtoBasketTest input').val(View.prototype.getButtonState(that));
+                        $('#stickyAddtoBasketTest #summary').html(View.prototype.summaryAttribute($('#refinement-summary'))[0].innerHTML + qty);
+                    } else {
+                        $('#stickyAddtoBasketTest input').prop( "disabled", true).hide();
+                        $('#stickyAddtoBasketTest input').val(View.prototype.getButtonState(that));
+                        $('.disabled-button').html(View.prototype.getButtonState(that));
+                        $('.disabled-button').css('display','inline-block');
+                        $('#stickyAddtoBasketTest #summary').html(View.prototype.summaryAttribute($('#refinement-summary'))[0].innerHTML + qty);
+                    }
+                });
+            }
+
+
+        };
+
+        var Controller = function () {return this;};
+
+        Controller.prototype.loadView = function () {
+            var testModel = new Model({});
+            var testView = new View();
+            testView.render();
+        };
+
+        return {
+            Model : Model,
+            View : View,
+            Controller : Controller
+        };
+
+    })(mmcore.$);
+
+    var bootStrapper = function () {
+        'use strict';
+        var testController = new HOFMaxymiser.Controller();
+        testController.loadView();
+    };
+
+    bootStrapper();
+</script>

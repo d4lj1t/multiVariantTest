@@ -1,0 +1,27 @@
+#accordion {color: #000000; width: 100%; padding: 15px 28px 15px 28px; font-size:13px; font-weight: bold; box-sizing: border-box; background-image: url(http://demandware.edgesuite.net/aaba_prd/on/demandware.static/Sites-hof-Site/-/default/v1436343503079/images/icons.svg); background-position: -16px -1080px; background-repeat: no-repeat; background-size: 75px auto;}
+  
+  #accordion.open { color: #ffffff; background-color: #E5198B; background-position: -12px -1163px; background-size:  75px auto;}
+  
+  @media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) { 
+    #accordion.open { background-position: -12px -1169px; }
+    #accordion { background-position: -16px -1086px; }
+  }
+  
+  #PPTGiftCardsContainer { padding: 15px 28px 15px 28px; }
+  
+  #dwfrm_pptgiftcard_cardnumber { width:225px; }
+  
+  #dwfrm_pptgiftcard_cardpin, #dwfrm_giftchecker_giftcode {width: 142px;}
+  
+  #couponCodeInput {width: 155px;}
+  
+  #accordion:hover {cursor: pointer;}
+  
+  #giftVoucherContainer, #voucherTermsAndConditions, #promotionalCodeForm {padding: 15px 28px 15px 28px;}
+  
+  #promotionalCodeContainer {float: none;}
+  
+  #eightColumns ol .section:first-child {display: none;}

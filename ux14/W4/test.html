@@ -1,0 +1,64 @@
+<style>
+#aside.ux14-w4 {
+	margin-bottom: 15px;
+}
+#secure.ux14-w4 {
+  float: none;
+  width: 300px;
+  display: block;
+  margin-bottom: 20px;
+}
+</style>
+
+<script>
+
+var HOFMaxymiser = HOFMaxymiser || {};
+
+HOFMaxymiser = (function ($) {
+
+	'use strict';
+	
+	var Model = function () {return this;};
+	
+	var View = function () {
+      	this.onload = true;
+
+		this.secure = $('#secure');
+		this.aside = $('#aside.companion');
+	};
+
+	View.prototype.render = function () {
+
+		this.aside.parent().append(secure);
+		this.aside.addClass('ux14-w4');
+		this.secure.addClass('ux14-w4');
+
+	    this.secure[0].innerHTML = "<img src='#$(ContentManager:logos-small.png)!' />";
+	};
+
+
+    var Controller = function () {return this;};
+	Controller.prototype.loadView = function () {
+		var testModel = new Model({});
+		var testView = new View();
+        testView.render();
+	};
+
+	return {
+        Model : Model,
+        View : View,
+        Controller : Controller
+    };
+})(mmcore.$);
+
+
+var bootStrapper = function () {
+    'use strict';
+    var testController = new HOFMaxymiser.Controller();
+    testController.loadView();
+};
+
+$( document ).ready(function() {
+   bootStrapper();
+});
+</script>

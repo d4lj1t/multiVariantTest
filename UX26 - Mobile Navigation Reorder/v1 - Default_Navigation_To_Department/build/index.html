@@ -1,0 +1,6 @@
+<style>
+.ux1{text-height:20px}
+</style>
+<script>
+var HOFMaxymiser=HOFMaxymiser||{};HOFMaxymiser.UX26_v1=function(){var n={testName:"UX26_v1",isProduction:!1},e={},a={brandsButton:$("#hof-btn-brands")};e.ShowSecondPage=function(){$("#hof-btn-departments").click()},a.MoveBrandNav=function(){setTimeout(function(){var n=$(".hof-megamenu-side").find('[data-level="2"] .primary'),e=$(".hof-megamenu-side").find('[data-level-back="0"]');e.click(function(){return!1}),e.find(".hof-icon-arrow-left").hide(),n.append('<li class="primany-list">');var i=n.find("li:last");i.append(a.brandsButton)},1e3)},e.loadView=function(){i("js-loaded "+n.testName),document.body.classList.add(n.testName),e.ShowSecondPage(),a.MoveBrandNav()};var i=function(e){0==n.isProduction&&console.log(e)};$(function(){var n=$(".hof-megamenu-side").find('[data-level-back="0"]');n.click(function(){return!1}),e.loadView()})}();
+</script>

@@ -1,0 +1,25 @@
+.ux28 {
+    .hurry-text {
+        display: inline;
+        width: 50px;
+        font-weight: bold;
+        color: #000;
+    }
+    .hof-pdp-mobile #deliveryChannelsUL li.shipping-icons div.shippingTitle {
+        &.text-hof-pink {
+            &.padded {
+                @media only screen and (max-width: 375px) {
+                    padding: 0px 0 10px;
+                    height: 10px;
+                }
+            }
+            @media only screen and (max-width: 325px) {
+                padding: 0px 0 10px;
+                height: 10px;
+            }
+        }
+    }
+    .hof-pdp-mobile #deliveryChannelsUL li.shipping-icons {
+        height: 40px;
+    }
+}

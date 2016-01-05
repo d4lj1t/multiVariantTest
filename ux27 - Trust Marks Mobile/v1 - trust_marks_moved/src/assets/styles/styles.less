@@ -1,0 +1,100 @@
+.UX27-v1 {
+    #checkoutProgress {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    #secure li.amexSafekey,
+    #secure li.geotrust,
+    #secure li.mastercard,
+    #secure li.visa,
+    .hof_card_1,
+    .hof_card_2,
+    .visa_card,
+    .master_card,
+    .maestro_card,
+    .diners_club_card,
+    .american_exp_card,
+    .paypal_card {
+        background: #fff url('http://i.imgur.com/Lq8QoJ5.png') no-repeat left top;
+    }
+    #secure {
+        float: none;
+        height: 35px;
+        ul {
+            width: 380px;
+            float: none;
+            margin: 0 auto;
+        }
+        li {
+            margin: 0 10px 0 0;
+            text-align: left;
+            text-indent: -9999px;
+            :last {
+            	margin-right: 0;
+            }
+        }
+
+        li.amexSafekey {
+            background-position: 0 -75px;
+            width: 91px;
+            height: 35px;
+        }
+        li.geotrust {
+            background-position: -100px -75px;
+            width: 106px;
+            height: 35px;
+        }
+        li.mastercard {
+            background-position: 0 -110px;
+            width: 74px;
+            height: 35px;
+        }
+        li.visa {
+            background-position: -214px -80px;
+            width: 56px;
+            height: 35px;
+        }
+    }
+    @media only all and (max-width: 375px) {
+        #promotionalCodeContainer {
+            float: none;
+        }
+        #couponCodeInput {
+            width: 97%;
+        }
+        .addCouponButton {
+            width: 100%;
+        }
+        .cartPage {
+            div.promotionalCode {
+                width: 100%;
+                label {
+                    float: none;
+                    text-align: left;
+                }
+            }
+            .subTotalTable {
+                width: 100%;
+                th {
+                    text-align: left;
+                }
+            }
+        }
+        #secure {
+            ul {
+                width: 240px;
+            }
+            li {
+                margin-right: 20px;
+                margin-bottom: 15px;
+                margin-left: 0;
+            }
+            li.mastercard {
+                margin-right: 38px;
+            }
+            li.visa {
+                margin-left: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+a {
+  color: #137AF2;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff0fbe;
+}
+.hof-header {
+  background-color: #000;
+  padding: 20px;
+  height: 200px;
+}
+.btn {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  display: block;
+  /*width:150px;*/
+  cursor: pointer;
+}
+.btn a {
+  color: white;
+  display: block;
+  /*   .chevron-right {
+        background-image: url('https://raw.githubusercontent.com/HouseofFraser/MVT/master/email/src/images/chevron-right-white.png?token=AJFnH9wZ93M_ukPolLcp3tr0E3z_uYVoks5ViBEHwA%3D%3D');
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    &:hover {
+        .chevron-right {
+            background-image: url('https://raw.githubusercontent.com/HouseofFraser/MVT/master/email/src/images/cheron-right-pink.png?token=AJFnH87_WCio6MVJP0tmYVSKnE29Zidpks5ViBSYwA%3D%3D');
+        }
+    }*/
+}
+.round-social {
+  border-radius: 25px;
+}
+.margin-social {
+  margin: 0 30px;
+}

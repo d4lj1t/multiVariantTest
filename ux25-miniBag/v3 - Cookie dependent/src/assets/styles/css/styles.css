@@ -1,0 +1,188 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+.ux25-v3 {
+  /*    .minicart-product:nth-child(7n){
+        visibility: hidden;
+    }*/
+}
+.ux25-v3 body {
+  background: #000;
+}
+.ux25-v3 #basket-content {
+  z-index: 1000 !important;
+  position: absolute;
+  width: 100%;
+  top: 134px;
+  background-color: transparent;
+  /*-webkit-filter: blur(2px);*/
+  overflow: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300 !important;
+}
+.ux25-v3 #hof-header .hof-btn-wrap .minicart-menu.hover-state.active {
+  width: 988px;
+  /*  .minicart-container {
+              float: right;
+          }*/
+}
+.ux25-v3 .minicart-top-content,
+.ux25-v3 .minicart-container-buttons {
+  /*float: left;*/
+  width: 993px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 7px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: transparent;
+}
+.ux25-v3 .minicart-top-content .center.minicart-all a,
+.ux25-v3 .minicart-container-buttons .center.minicart-all a {
+  line-height: 35px;
+}
+.ux25-v3 .minicart-bottom-content {
+  /* width: 100%;*/
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  background-color: #E10098;
+  text-align: center;
+  color: white;
+  clear: both;
+  font-size: 18px;
+}
+.ux25-v3 .minicart-bottom-content span.font-sm {
+  letter-spacing: 1px;
+}
+.ux25-v3 #hof-header .call-actions-container {
+  z-index: 1000;
+}
+.ux25-v3 .minicart-container {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  background-color: transparent;
+  opacity: 1;
+  overflow: hidden;
+  /*padding-left: 30px;
+        padding-right: 15px;*/
+}
+.ux25-v3 .minicart-container .products {
+  display: inline;
+  margin: 0 auto;
+  white-space: nowrap;
+  width: 993px;
+  padding-left: 7px;
+  overflow: hidden;
+}
+.ux25-v3 .minicart-product {
+  clear: none;
+  width: calc(141.85714286px);
+  height: 180px;
+  list-style: none;
+  position: relative;
+  text-align: center;
+  color: #e51d9b;
+  float: none;
+  display: inline-block;
+}
+.ux25-v3 .minicart-product .img-wrapper {
+  border: 2px solid #efefef;
+  height: 180px;
+  width: 140px;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 1;
+}
+.ux25-v3 .minicart-product .img-wrapper .deviceImage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.ux25-v3 .minicart-subtotal {
+  display: none;
+}
+.ux25-v3 .minicart-container-buttons {
+  clear: both;
+}
+.ux25-v3 .overlay-btn-wrapper {
+  margin-top: 10px;
+}
+.ux25-v3 .overlay-content-wrapper {
+  height: 120px;
+}
+.ux25-v3 .overlay-content-wrapper.view-more {
+  height: 47px;
+}
+.ux25-v3 .circle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: inline-block;
+  line-height: 40px;
+  cursor: pointer;
+}
+.ux25-v3 .circle-btn:hover {
+  background-color: black;
+  transition: 300ms all ease-in-out;
+}
+.ux25-v3 .minicart-remove {
+  float: none;
+}
+.ux25-v3 .yes-btn {
+  margin-right: 10px;
+}
+.ux25-v3 .remove-clicked .icon-cross {
+  display: none;
+}
+.ux25-v3 .img-overlay-cross {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  background-size: 10px auto;
+  z-index: 100;
+}
+.ux25-v3 .close-mini-bag-cross {
+  width: 15px;
+  height: 15px;
+  background-size: 15px auto;
+  margin-top: 10px;
+}
+.ux25-v3 .minicart-all {
+  background-color: transparent;
+  text-align: left;
+  text-decoration: underline;
+  display: inline-block;
+}
+.ux25-v3 .minicart-checkout {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: -30px;
+  height: auto;
+}
+.ux25-v3 .hof-btn-green.hof-btn-minibag-checkout {
+  float: none;
+  width: 200px;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 4px;
+  border-bottom: none;
+  border-right: none;
+}
+.ux25-v3 .view-more-top {
+  font-size: 18px;
+}
+.ux25-v3 .view-more-bottom {
+  font-size: 14px;
+}

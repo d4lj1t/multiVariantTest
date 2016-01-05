@@ -1,0 +1,24 @@
+#collectCountdown {
+    color: #363;
+    margin: 0 0 8px 0;
+    font-weight: bold;
+    width: 100%;
+    display: block !important;
+}
+#collectCountdown .iscDelivery {
+    background: url(//demandware.edgesuite.net/aaba_prd/on/demandware.static/Sites-hof-Site/-/default/v1435901449056/images/pdpDeliveryIcons.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 8px;
+}
+#deliveryChannelsUL .shipping-icons:first-child {
+    display: none !important;
+}
+.hof-pdp .deliveryList {
+    margin-top: 0px;
+}
+#collectCountdown #clock {
+    font-weight:normal;
+}

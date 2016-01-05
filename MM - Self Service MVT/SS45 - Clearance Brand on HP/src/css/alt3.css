@@ -1,0 +1,42 @@
+#clearance-brands .brand a img {
+    border-bottom: 0;
+    margin: 0;
+}
+#clearance-brands .brand a {
+    border-bottom: 5px solid #fad000;
+    display: block;
+    width: 152px;
+    height:80px;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    margin: 0 17px;
+}
+
+#clearance-brands a:hover img {
+    border-bottom: 0 !important;
+}
+
+#clearance-brands .brand a:hover {
+    border-bottom: 5px solid #000;
+}
+
+
+/* CUSTOM IMAGE SIZES */
+
+#clearance-brands .brand a img.aldo {
+    width: 120px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#clearance-brands .brand a img.gant {
+    width: 135px;
+    margin: 0 auto;
+    padding-top: 4px;
+}
+
+#clearance-brands .brand a img.benetton {
+    width: 130px;
+    margin: 0 auto;
+    padding-top: 6px;
+}

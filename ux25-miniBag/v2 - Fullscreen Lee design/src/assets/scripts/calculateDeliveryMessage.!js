@@ -1,0 +1,40 @@
+<!-- calculate which  delivery message to show according to current time -->
+
+Model.insertMessageRules = [{
+    text: "Buy by noon, to get same day delivery (6pm - 9pm).",
+    time: 0
+}, {
+    text: "Buy by 7pm to receive next day delivery.",
+    time: 12
+}, {
+    text: "Buy by midnight & collect instore from noon next day.",
+    time: 19
+}];
+
+Model.message = function () {
+    var message = "";
+    for (var current = 0; current < Model.insertMessageRules.length; current++) {
+        if (Model.insertMessageRules[current + 1] != null) {
+            if ((Model.hour > Model.insertMessageRules[current].time) && (Model.hour < Model.insertMessageRules[current + 1].time)) {
+                message = Model.insertMessageRules[current].text;
+                break;
+            }
+        } else {
+            message = Model.insertMessageRules[Model.insertMessageRules.length - 1].text;
+        }
+    }
+    if (message == "") {
+        message = Model.insertMessageRules[0].text;
+    }
+    return message;
+};
+
+Controller.isWeekday = (Model.day != 5) && (Model.day != 6) && (Model.day != 0);
+
+Controller.getMessage = function () {
+    if (Controller.isWeekday) {
+        return Model.message();
+    }
+};
+
+<!-- / calculate which  delivery message to show according to current time -->
